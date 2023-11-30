@@ -13,7 +13,10 @@ struct MainView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
+            VStack{
+                
+                AsyncImage(url: URL(string: "https://companiesmarketcap.com/img/company-logos/256/GME.png"), scale: 2)
+                    .frame(height: 20)
                 Picker("Select Console", selection: $selectedConsole) {
                     ForEach(ConsoleBrand.allCases, id: \.self) { console in
                         Text(console.rawValue)
@@ -21,30 +24,28 @@ struct MainView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
-
+                
                 List(viewModel.getProducts(for: selectedConsole!)) { product in
                     NavigationLink(destination: ProductDetailView(article: product)) {
                         ProductRowWithImage(article: product)
                     }
                 }
             }
-            .navigationTitle("GameStore")
+            .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
+            .background(Color(.systemBlue))
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Image(systemName: "line.horizontal.3")
-                        .imageScale(.large)
-                        .onTapGesture {
-                            AuthService.shared.signOut()
-                        }
-                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                         Menu(content: {
+                             Text("Categorías")
+                             Text("Mis compras")
+                            Text("Cerrar sesión")
+                                 .onTapGesture {
+                                     AuthService.shared.signOut()
+                                 }
+                         }, label: {Image(systemName: "line.horizontal.3")})
+                      }
             }
         }
-    }
-}
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }
