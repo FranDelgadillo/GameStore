@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ProductDetailView: View {
     let article: Article
-    @StateObject private var cartViewModel = CartViewModel()
+    @EnvironmentObject private var cartViewModel: CartViewModel
 
     var body: some View {
         VStack {
-            Image(systemName: "photo") // Replace with actual image
+            Image(article.image)
                 .resizable()
                 .scaledToFit()
                 .frame(height: 200)
@@ -31,7 +31,6 @@ struct ProductDetailView: View {
                 Spacer()
 
                 Button("Add to Cart") {
-                    // Implement cart logic here
                     let cartItem = CartItem(article: article, quantity: 1)
                     cartViewModel.addToCart(cartItem: cartItem)
                 }

@@ -12,7 +12,7 @@ struct ProductRowWithImage: View {
 
     var body: some View {
         HStack {
-            Image(systemName: "photo") // Placeholder image, replace with actual image
+            Image(article.image)
                 .resizable()
                 .frame(width: 50, height: 50)
                 .cornerRadius(8)

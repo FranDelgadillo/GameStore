@@ -9,26 +9,30 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var viewModel = ProductViewModel()
+    @StateObject private var cartViewModel = CartViewModel()
     @State private var selectedConsole = ConsoleBrand.allCases.first
 
     var body: some View {
         NavigationView {
             VStack {
+
+                AsyncImage(url: URL(string: "https://companiesmarketcap.com/img/company-logos/256/GME.png"), scale: 2)
+                                    .frame(height: 20)
                 Picker("Select Console", selection: $selectedConsole) {
                     ForEach(ConsoleBrand.allCases, id: \.self) { console in
-                        Text(console.rawValue)
+                    Text(console.rawValue)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
 
                 List(viewModel.getProducts(for: selectedConsole!)) { product in
-                    NavigationLink(destination: ProductDetailView(article: product)) {
+                    NavigationLink(destination: ProductDetailView(article: product)
+                            .environmentObject(cartViewModel)) {
                         ProductRowWithImage(article: product)
                     }
                 }
             }
-            .navigationTitle("GameStore")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing){

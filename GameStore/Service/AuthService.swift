@@ -19,7 +19,12 @@ class AuthService{
     }
     
     func login(email: String, password: String) async throws {
-        
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+        } catch {
+            throw error
+        }
     }
     
     func createUser(email: String, username: String, password: String) async throws {

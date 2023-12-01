@@ -24,7 +24,6 @@ class ContentViewModel: ObservableObject{ //
     }
     
     func setupSuscriber(){
-        // this is used to avoid memory leak
         service.$userSession.sink { [weak self] userSession in
             self?.userSession = userSession
         }

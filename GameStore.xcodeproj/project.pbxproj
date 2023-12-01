@@ -55,9 +55,9 @@
 		855FCBBE2B0BFE4E00BA30EF /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FCBBD2B0BFE4E00BA30EF /* ProductDetailView.swift */; };
 		855FCBC02B0BFED100BA30EF /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FCBBF2B0BFED100BA30EF /* ProductRow.swift */; };
 		855FCBC22B0BFF1700BA30EF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FCBC12B0BFF1700BA30EF /* MainTabView.swift */; };
-		855FCBC42B0C004B00BA30EF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FCBC32B0C004B00BA30EF /* Enums.swift */; };
 		855FCBC62B0C01F600BA30EF /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FCBC52B0C01F600BA30EF /* ProductViewModel.swift */; };
 		855FCBC82B0C05BD00BA30EF /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FCBC72B0C05BD00BA30EF /* ContentViewModel.swift */; };
+		85AB78E22B0FF99B00489445 /* ConsoleBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB78E12B0FF99B00489445 /* ConsoleBrand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,9 +83,9 @@
 		855FCBBD2B0BFE4E00BA30EF /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		855FCBBF2B0BFED100BA30EF /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		855FCBC12B0BFF1700BA30EF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		855FCBC32B0C004B00BA30EF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		855FCBC52B0C01F600BA30EF /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		855FCBC72B0C05BD00BA30EF /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		85AB78E12B0FF99B00489445 /* ConsoleBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleBrand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +203,7 @@
 			children = (
 				855FCB642B0BDDAD00BA30EF /* Article.swift */,
 				855FCB662B0BDDF800BA30EF /* CartItem.swift */,
-				855FCBC32B0C004B00BA30EF /* Enums.swift */,
+				85AB78E12B0FF99B00489445 /* ConsoleBrand.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +375,7 @@
 				855FCB6B2B0BDED800BA30EF /* AuthViewModel.swift in Sources */,
 				855FCBB82B0BFA3100BA30EF /* CartItemRow.swift in Sources */,
 				855FCBC02B0BFED100BA30EF /* ProductRow.swift in Sources */,
+				85AB78E22B0FF99B00489445 /* ConsoleBrand.swift in Sources */,
 				855FCBC22B0BFF1700BA30EF /* MainTabView.swift in Sources */,
 				855FCB792B0BEFBA00BA30EF /* CartView.swift in Sources */,
 				855FCB6F2B0BDFC000BA30EF /* SignUpView.swift in Sources */,
@@ -384,7 +385,6 @@
 				855FCBC82B0C05BD00BA30EF /* ContentViewModel.swift in Sources */,
 				855FCB652B0BDDAD00BA30EF /* Article.swift in Sources */,
 				855FCBB42B0BF5B300BA30EF /* AuthTextModifier.swift in Sources */,
-				855FCBC42B0C004B00BA30EF /* Enums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

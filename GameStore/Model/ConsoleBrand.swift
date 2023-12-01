@@ -1,8 +1,8 @@
 //
-//  Enums.swift
+//  ConsoleBrand.swift
 //  GameStore
 //
-//  Created by Francisco Delgadillo Soria on 20/11/23.
+//  Created by Francisco Delgadillo Soria on 23/11/23.
 //
 
 import Foundation

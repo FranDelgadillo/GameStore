@@ -30,7 +30,6 @@ struct PurchaseView: View {
 
             Section {
                 Button("Place Order") {
-                    // Handle order placement
                     presentationMode.wrappedValue.dismiss()
                 }
             }
